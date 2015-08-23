@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>More Exercise</title>
+  <link rel="stylesheet" href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="ctrl">
+  <div class="col-md-12">
+  <div id="div1" class="well col-md-3" style="margin-top:10px;">
+  	<div class="col-md-4">
+  	<select class="btn btn-default dropdown" ng-options="data.name for data in item" ng-model="selectOptions"></select>
+	</div>
+	<div class="col-md-2">
+		<button class="btn btn-defalut" ng-click="getInfo()">submit</button>
+	</div>
+   </div>
+
+	<!--<div id="foo" class="bar" style="margin-top:10px;">
+	  <div id="fizz" class="buzz">
+	    <a class="link" href="#">sample anchor</a>
+	  </div>
+	</div>-->
+
+	<div id="baz" class="well col-md-offset-1 col-md-3"style="margin-top:10px;">
+	  <ul id="list1">
+	  	<li ng-repeat="items in list">{{items}}</li>
+	  </ul>
+	</div>
+
+	<div id="foobar" class="well col-md-offset-1 col-md-3" style="margin-top:10px;">
+		<div class="row">
+			<a class="col-md-6" href="" ng-click="checkOrUncheck(options)" ng-repeat="options in twoLink">{{options}}</a>
+		</div> 
+		<div class="row" ng-repeat="item in checkboxes">
+			<label>
+      			<input type="checkbox"  ng-model="checkOrNot" disabled>
+      				{{item}}
+    		</label>
+		</div>
+		
+	</div>
+		
+	</div>
+</div>
+  
+  <script src="lib/angular-1.4.4/angular.min.js">
+  </script>
+  <script src="lib/angular-1.4.4/angular-animate.min.js">
+  </script>
+  <script src="lib/bootstrap-3.3.5-dist/js/ui-bootstrap-tpls-0.13.3.min.js">
+  </script>
+  <script src="src/controller.js">
+  </script>
+</body>
+</html>
